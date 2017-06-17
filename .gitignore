@@ -7,15 +7,33 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+# Ignore the database config.
+database.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
 !/log/.keep
-!/tmp/.keep
+/tmp
+/.idea
+/.byebug_history
 
-# Ignore Byebug command history file.
-.byebug_history
+# Ignore SimpleCov output
+/coverage
+
+# Ignore precompiled assets
+public/assets
+
+# Ignore images folder
+public/images/
+
+# Ignore stylesheets
+/public/stylesheets/*.css
+
+# Ignore tmp uploads
+/public/uploads/tmp/
+
+# Ignore all uploads
+/public/uploads
+
+# Ignore Mac metadata files
+.DS_Store
