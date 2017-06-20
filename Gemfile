@@ -34,6 +34,7 @@ gem 'devise'
 
 ## Security and Permissions
 gem 'pundit' # User permissions
+gem 'credit_card_validations' # Assistance with credit card validations
 
 gem 'foreman' # Start local servers with scripts
 
