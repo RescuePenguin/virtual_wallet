@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :homes
   devise_for :users
 
-  get 'home/index'
+  get 'public/index'
 
-  root 'home#index'
+  root 'public#index'
 end

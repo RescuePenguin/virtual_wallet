@@ -4,5 +4,5 @@ class Wallet < ApplicationRecord
   has_many :received_transactions, class_name: 'Transaction', foreign_id: :target_id
   has_many :credit_cards
 
-  validates :balance, presence: true
+  validates :balance, :user, presence: true
 end
