@@ -18,8 +18,9 @@
             = f.password_field :password, autocomplete: "off", class: 'form-control', style: 'width: 400px'
           .form-group
             = f.label :password_confirmation
-            br/
+            br
             = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', style: 'width: 400px'
           .actions
             = f.submit "Sign up"
         = render "devise/shared/links"
+
