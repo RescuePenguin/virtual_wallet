@@ -12,6 +12,6 @@ class CreditCard < ApplicationRecord
   end
 
   def date_in_future
-    errors.add :base, 'credit card is expired' if expiration_date <= DateTime.now
+    errors.add :base, 'credit card is expired' if DateTime.now > expiration_date
   end
 end

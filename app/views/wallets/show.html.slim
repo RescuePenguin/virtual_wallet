@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-8.col-md-offset-2 style='position: static'
+      .wallet
+        h1 = '$' + @wallet.balance.to_s
+        h3 Current balance
+        .spacer
+        .row
+          .col-md-6
+            = link_to "Add Funds", add_funds_path,  class:"btn btn-large btn-primary"
+          .col-md-6
+            = link_to "Transfer", new_transaction_path, class:"btn btn-large btn-primary"

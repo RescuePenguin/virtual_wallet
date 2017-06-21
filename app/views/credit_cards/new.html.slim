@@ -1,0 +1,24 @@
+.container
+  .row
+    .col-md-8.col-md-offset-2 style='position: static'
+      .wallet
+        h3 Add a new Credit Card
+        = form_for @credit_card, html: { class: 'form-horizontal' } do |f|
+          = f.hidden_field :wallet_id
+          .form-group.col-md-6
+            = f.label :number, class: 'sr-only'
+            = f.text_field :number, class: 'form-control', placeholder: 'Card Number', maxlength: '16'
+          .form-group.col-md-4 style='display: inline-block'
+            = f.label :expiration_date, class: 'sr-only'
+            = f.hidden_field :expiration_date
+            = text_field_tag 'expiration_month', '', class: 'form-control', placeholder: 'MM', maxlength: '2', style: 'width: 60px; display: inline-block'
+            | /
+            = text_field_tag 'expiration_year', '', class: 'form-control', placeholder: 'YY', maxlength: '2', style: 'width: 60px; display: inline-block'
+          .form-group.col-md-3
+            = f.label :cvv, class: 'sr-only'
+            = f.number_field :cvv, class: 'form-control', placeholder: 'CVV', maxlength: '4'
+          .form-group.col-md-12
+            = f.label :full_name, class: 'sr-only'
+            = f.text_field :full_name, class: 'form-control', placeholder: 'Full Name'
+
+          = f.submit 'Save new card', class: 'btn btn-primary btn-wide'

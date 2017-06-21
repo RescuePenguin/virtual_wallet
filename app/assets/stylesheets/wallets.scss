@@ -1,3 +1,11 @@
-// Place all the styles related to the wallets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wallet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width:50%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 400px;
+}
