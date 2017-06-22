@@ -1,24 +1,13 @@
-# README
+Virtual Wallet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Virtual Wallet project. Allows ability to upload funds and transfer them to other users.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Nothing too fancy for setup.
+1. Download
+2. Bundle Install
+3. Setup rake database
+```console
+rake db:create
+rake db:migrate
+```
+4. Start server with `foreman start -f Procfile.dev`
