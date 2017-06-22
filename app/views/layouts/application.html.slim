@@ -8,4 +8,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .site-wrapper.background
-      = yield
+      .container
+        .row
+          .col-md-8.col-md-offset-2 style='position: static'
+            = yield

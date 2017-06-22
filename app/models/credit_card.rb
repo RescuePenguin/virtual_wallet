@@ -14,4 +14,8 @@ class CreditCard < ApplicationRecord
   def date_in_future
     errors.add :base, 'credit card is expired' if DateTime.now > expiration_date
   end
+
+  def display_number
+    number[0..number.length - 4].gsub(/[0-9]/, '*') + number[-4..-1]
+  end
 end

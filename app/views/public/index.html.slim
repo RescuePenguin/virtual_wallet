@@ -1,12 +1,9 @@
-.container
+.login
+  h2 Virtuo
+  p Sign up now to start managing your money.
   .row
-    .col-md-8.col-md-offset-2 style='position: static'
-      .login
-        h2 Virtuo
-        p Sign up now to start managing your money.
-        .row
-          .col-md-6
-            = link_to "Register", new_user_registration_path,  class:"btn btn-large btn-primary"
-          .col-md-6
-            = link_to "Login", new_user_session_path, class:"btn btn-large btn-primary"
+    .col-md-6
+      = link_to "Register", new_user_registration_path,  class:"btn btn-large btn-primary"
+    .col-md-6
+      = link_to "Login", new_user_session_path, class:"btn btn-large btn-primary"
 
