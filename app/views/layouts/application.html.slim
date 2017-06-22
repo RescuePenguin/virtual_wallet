@@ -7,6 +7,12 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    .nav-bar
+      .row
+        .col-md-4 style='color: white; text-align: start'
+          / i.fa.fa-bars.navigation style='font-size: 32px; margin: 14px;'
+        .col-md-4 style='margin: 6px 0'
+          a href="#{wallet_path}" style='font-size: 32px; color: white; text-align: center; text-decoration: none;' Virtual Wallet
     .site-wrapper.background
       .container
         .row

@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'slim-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Font awesome for a large variety of font icons
+gem 'font-awesome-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

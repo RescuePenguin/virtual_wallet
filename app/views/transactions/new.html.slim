@@ -1,0 +1,35 @@
+.wallet
+  = form_for(@transaction) do |f|
+    = f.hidden_field :source_id
+    .form-group
+      = f.hidden_field :target_id
+      = label_tag :target_email, 'Who would you like to send money to?'
+      = text_field_tag :target_email, '', class: 'form-control', placeholder: 'Email'
+    .form-group
+      = f.label :amount, 'How much would you like to send?'
+      = f.number_field :amount, class: 'form-control', step: '0.01', placeholder: '$0.00'
+
+    .form-group
+      h3 Choose a payment method
+      .row
+        .col-md-6.col-md-offset-1 style='text-align: start'
+          = label_tag "Wallet Balance ($#{@wallet.balance})"
+        .col-md-2
+          = f.radio_button :payment_type, 'wallet', selected: true
+      p
+      .row
+        .col-md-6.col-md-offset-1 style='text-align: start'
+          = label_tag 'Credit Card'
+        .col-md-2
+          = f.radio_button :payment_type, 'credit_card'
+      .credit-card-options style='display: none'
+        .row
+          .col-md-5.col-md-offset-1 style='text-align: start'
+            = f.label :credit_card, 'Choose a card', style: 'margin-right: 10px;'
+          .col-md-5
+            = f.collection_select :credit_card_id, @wallet.credit_cards.all, :id, :display_number, class: 'form-control'
+    .row
+      = link_to 'Add a new card', new_credit_card_path
+    .spacer
+    .row
+      = f.submit 'Send Money', class: 'btn btn-primary'

@@ -4,7 +4,7 @@ class WalletsController < ApplicationController
   end
 
   def edit
-    @transaction = Transaction.new source: @wallet, target: @wallet
+    @transaction = Transaction.new source_id: @wallet.id, target_id: @wallet.id
   end
 
   def update

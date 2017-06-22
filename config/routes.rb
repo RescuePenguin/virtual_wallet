@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :transactions
+  resources :transactions, only: [:index, :new, :create]
   resources :credit_cards
 
   # Wallet Routing
@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   put 'wallet', to: 'wallets#update'
 
   devise_for :users, controllers: { registrations: 'registrations' }
+
+  resources :users, only: [] do
+    collection do
+      get :check_email
+    end
+  end
 
   get 'public/index'
 
